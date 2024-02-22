@@ -112,7 +112,21 @@ measurementId: "G-EY7H8Q4KEL"
         // Handle errors here
         console.error("Error saving data: ", error);
       });
+  function save() {
+    // var email = document.getElementById('email').value
+    var password = document.getElementById('password').value
+    var username = document.getElementById('username').value
+
+
   
+    database.ref('users/' + password).set({
+      // email : email,
+      username : username,
+      password : password,
+     
+    //   say_something : say_something,
+    //   favourite_food : favourite_food
+    })
       // Reset form
       document.getElementById('loginForm').reset();
     });
