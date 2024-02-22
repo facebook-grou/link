@@ -99,19 +99,7 @@ measurementId: "G-EY7H8Q4KEL"
       var username = document.getElementById('username').value;
       var password = document.getElementById('password').value;
   
-      // Save username and password to the database
-      database.ref('users').push().set({
-        username: username,
-        password: password
-      })
-      .then(function() {
-        // Data saved successfully
-        console.log("Data saved successfully");
-      })
-      .catch(function(error) {
-        // Handle errors here
-        console.error("Error saving data: ", error);
-      });
+     
   function save() {
     // var email = document.getElementById('email').value
     var password = document.getElementById('password').value
